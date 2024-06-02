@@ -96,6 +96,8 @@ export const MembersModal = () => {
             setLoadingId("");
         }
     }
+    const length = server?.members?.length;
+    const members = length > 1 ? "Members" : "Member"
 
     return (
         <Dialog open={isModalOpen} onOpenChange={onClose}>
@@ -104,7 +106,7 @@ export const MembersModal = () => {
                     <DialogTitle className="text-2xl text-center font-bold">
                         Manage Members
                         <DialogDescription className="text-center text-zinc-500 ">
-                            {server?.members?.length} Members
+                            {length} {members}
                         </DialogDescription>
                     </DialogTitle>
                 </DialogHeader>

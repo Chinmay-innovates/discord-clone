@@ -1,21 +1,18 @@
 'use client'
 
 import axios from "axios"
-import {
-    Dialog,
-    DialogContent,
-    DialogHeader,
-    DialogTitle
-} from "@/components/ui/dialog"
 
 
 import { useModal } from "@/hooks/use-modal-store"
 import { useOrigin } from "@/hooks/use-origin"
+
+import { Check, Copy, RefreshCw } from "lucide-react"
+import { useState } from "react"
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "../ui/dialog"
 import { Label } from "../ui/label"
 import { Input } from "../ui/input"
 import { Button } from "../ui/button"
-import { Check, Copy, RefreshCw } from "lucide-react"
-import { useState } from "react"
+
 
 export const InviteModal = () => {
     const { onOpen, isOpen, onClose, type, data } = useModal();
@@ -58,7 +55,7 @@ export const InviteModal = () => {
 
                 </DialogHeader>
                 <div className="p-6">
-                    <Label className="uppercase text-xs font-bold text-zinc-500 dark:text-secondary/70">
+                    <Label className="uppercase text-sm font-bold text-zinc-500 dark:text-secondary/70">
                         Server invite link
                     </Label>
                     <div className="flex items-center mt-2 gap-x-2">

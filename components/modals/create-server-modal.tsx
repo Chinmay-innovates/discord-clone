@@ -28,8 +28,8 @@ import { useRouter } from "next/navigation"
 import { useModal } from "@/hooks/use-modal-store"
 
 const formSchema = z.object({
-    name: z.string().min(1, { message: "Server name is required" }),
-    imageUrl: z.string().min(1, { message: "Server image is required" })
+    name: z.string().min(1, { message: "Server name is required." }),
+    imageUrl: z.string().min(1, { message: "Server image is required." })
 })
 
 export const CreateServerModal = () => {
@@ -100,7 +100,7 @@ export const CreateServerModal = () => {
                                 name='name'
                                 render={({ field }) => (
                                     <FormItem>
-                                        <FormLabel className="uppercase text-xs font-bold text-zinc-500 dark:text-secondary/70">
+                                        <FormLabel className="uppercase text-sm font-bold text-zinc-500 dark:text-secondary/70">
                                             Server name
                                         </FormLabel>
                                         <FormControl>

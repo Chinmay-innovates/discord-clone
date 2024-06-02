@@ -6,6 +6,9 @@ import { redirect } from "next/navigation";
 
 import { ServerHeader } from "./server-header";
 
+import { ServerSearch } from "./server-search";
+import { ScrollArea } from "../ui/scroll-area";
+
 interface ServerSidebarProps {
     serverId: string;
 }
@@ -53,6 +56,11 @@ export const ServerSidebar = async ({
                 server={server}
                 role={role}
             />
+            <ScrollArea className="flex-1 px-3">
+                <div className="mt-2">
+                    <ServerSearch />
+                </div>
+            </ScrollArea>
         </div>
     );
 };

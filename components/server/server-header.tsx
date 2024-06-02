@@ -8,7 +8,7 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger
-} from "@/components/ui/dropdown-menu";
+} from "../ui/dropdown-menu"
 import {
   ChevronDown,
   Settings2,
@@ -61,15 +61,17 @@ export const ServerHeader = ({
           </DropdownMenuItem>
         )}
         {isAdmin && (
-          <DropdownMenuItem 
-          onClick={() => onOpen("members", { server })}
-          className="px-3 py-2 text-sm cursor-pointer">
+          <DropdownMenuItem
+            onClick={() => onOpen("members", { server })}
+            className="px-3 py-2 text-sm cursor-pointer">
             Manage Members
             <Users className="size-4 ml-auto" />
           </DropdownMenuItem>
         )}
         {isModerator && (
-          <DropdownMenuItem className="px-3 py-2 text-sm cursor-pointer">
+          <DropdownMenuItem
+            onClick={() => onOpen("createChannel")}
+            className="px-3 py-2 text-sm cursor-pointer">
             Create Channel
             <PlusCircle className="size-4 ml-auto" />
           </DropdownMenuItem>
@@ -78,13 +80,18 @@ export const ServerHeader = ({
           <DropdownMenuSeparator />
         )}
         {isAdmin && (
-          <DropdownMenuItem className="text-red-500 px-3 py-2 text-sm cursor-pointer">
+          <DropdownMenuItem
+
+            onClick={() => onOpen("deleteServer", { server })}
+            className="text-red-500 px-3 py-2 text-sm cursor-pointer">
             Delete Server
             <Trash2 className="size-4 ml-auto" />
           </DropdownMenuItem>
         )}
         {!isAdmin && (
-          <DropdownMenuItem className="text-red-500 px-3 py-2 text-sm cursor-pointer">
+          <DropdownMenuItem
+            onClick={() => onOpen("leaveServer", { server })}
+            className="text-red-500 px-3 py-2 text-sm cursor-pointer">
             Leave Server
             <LogOut className="size-4 ml-auto" />
           </DropdownMenuItem>

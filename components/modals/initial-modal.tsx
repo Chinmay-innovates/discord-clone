@@ -28,8 +28,8 @@ import { FileUpload } from "@/components/file-upload"
 import { useRouter } from "next/navigation"
 
 const formSchema = z.object({
-    name: z.string().min(1, { message: "Server name is required" }),
-    imageUrl: z.string().min(1, { message: "Server image is required" })
+    name: z.string().min(1, { message: "Server name is required." }),
+    imageUrl: z.string().min(1, { message: "Server image is required." })
 })
 
 export const InitialModal = () => {
