@@ -35,7 +35,7 @@ export const ServerHeader = ({
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="focus:outline-none" asChild>
-        <button className="w-full text-white font-semibold px-3 flex items-center h-12 border-neutral-200 
+        <button className="w-full text-black dark:text-white font-semibold px-3 flex items-center h-12 border-neutral-200 
   dark:bg-neutral-800 border-b-2 hover:bg-zinc-700/10 dark:hover:bg-zinc-700/50 transition">
           {server.name}
           <ChevronDown className="size-5 ml-auto" />
@@ -81,7 +81,6 @@ export const ServerHeader = ({
         )}
         {isAdmin && (
           <DropdownMenuItem
-
             onClick={() => onOpen("deleteServer", { server })}
             className="text-red-500 px-3 py-2 text-sm cursor-pointer">
             Delete Server

@@ -24,8 +24,7 @@ export async function PATCH(
         inviteCode: v4(),
       },
     });
-
-    return new NextResponse(JSON.stringify(server));
+    return NextResponse.json(server);
   } catch (error) {
     console.log("[SERVER_ID]", error);
     return new Response("Internal error", { status: 500 });

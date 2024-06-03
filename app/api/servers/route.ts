@@ -1,6 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
 import { currentProfile } from "@/lib/current-profile";
-import { error } from "console";
 import { NextResponse } from "next/server";
 import { db } from "@/lib/db";
 import { MemberRole } from "@prisma/client";
